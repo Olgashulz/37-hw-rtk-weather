@@ -10,7 +10,8 @@ const weatherSlice = createSlice(
                 temp: "",
                 pressure: "",
                 sunset: ""
-            }
+            },
+            message: "Enter city name"
         },
         reducers: {
             setInfo(state, action) {
@@ -22,10 +23,13 @@ const weatherSlice = createSlice(
             },
             errorInfo(state) {
                 state.weatherInfo = "Error..."
-            }
+            },
+            setMessage(state, action) { // <-- fix typo here
+                state.message = action.payload;
+            },
         }
     }
 )
 
-export const {setInfo, pendingInfo, errorInfo} = weatherSlice.actions;
+export const {setInfo, pendingInfo, errorInfo, setMessage} = weatherSlice.actions;
 export default weatherSlice.reducer;

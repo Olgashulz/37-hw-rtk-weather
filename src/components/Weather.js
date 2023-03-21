@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 
 const Weather = () => {
-    const {message} = useSelector(store => store.message);
+    const {message} = useSelector(store => store.weather);
     const {weatherInfo: weather} = useSelector(store => store.weather);
     if (message) {
         return (

@@ -1,6 +1,6 @@
 import {API_key, BASE_URL} from "../utils/constans";
-import {errorInfo, pendingInfo, setInfo} from "../slices/weatherSlice";
-import {setMessage} from "../slices/messageSlice";
+import {errorInfo, pendingInfo, setInfo, setMessage} from "../slices/weatherSlice";
+
 
 export const fetchWeather = (city) => {
     return async (dispatch) => {
